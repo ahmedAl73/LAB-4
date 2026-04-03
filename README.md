@@ -80,9 +80,7 @@ A simulated attack scenario was analyzed, including:
 ---
 
 ## 👨‍💻 Author
-Ahmed Alkhawlani  
-IT 520 – Network Security  
-
+Ahmed Alkhawlani   
 ---
 
 ## 📅 Date
