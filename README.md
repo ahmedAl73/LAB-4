@@ -1,7 +1,7 @@
 # LAB-4: Enterprise LAN Security Assessment
 
 ## 📌 Overview
-This project is part of IT 520 and focuses on designing, implementing, and securing an enterprise network for a simulated organization: Winslow Bay Municipal Utility District (WBMUD).
+This project is part of IT 355 and focuses on designing, implementing, and securing an enterprise network for a simulated organization: Winslow Bay Municipal Utility District (WBMUD).
 
 The lab demonstrates practical skills in network architecture, protocol security, vulnerability analysis, and incident response.
 
