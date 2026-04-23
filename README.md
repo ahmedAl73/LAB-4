@@ -39,6 +39,15 @@ This lab includes analysis of:
 
 ---
 
+### TCP vs UDP Security Analysis
+TCP and UDP are both transport layer protocols, but they differ significantly in terms of security and reliability. TCP is a connection-oriented protocol that uses a three-way handshake (SYN, SYN-ACK, ACK) to establish communication between devices. This process ensures that both the sender and receiver are synchronized before data transmission begins. Because TCP maintains connection state and uses acknowledgments, it provides better visibility for security tools such as firewalls and intrusion detection systems. Suspicious connections can be tracked, logged, and terminated more effectively.
+
+In contrast, UDP is a connectionless protocol that does not establish a formal session before transmitting data. This lack of a handshake makes UDP faster and more efficient for real-time applications, but it also introduces security risks. Since UDP does not verify the identity of the sender, it is more vulnerable to spoofing attacks, where an attacker falsifies the source IP address. Additionally, the absence of connection tracking makes it more difficult for security systems to monitor and detect malicious activity.
+
+Overall, TCP provides stronger security visibility and control due to its connection-oriented design, while UDP prioritizes speed and efficiency at the cost of reduced security monitoring and increased susceptibility to spoofing attacks.
+
+---
+
 ## ⚠️ Vulnerability Simulation
 A simulated **Shellshock attack** was performed on a web server to demonstrate:
 
