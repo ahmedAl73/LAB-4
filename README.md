@@ -73,7 +73,6 @@ The impact of this incident is significant, particularly in a critical infrastru
 
 ---
 
----
 
 ### 🔍 Key Actions
 - Attack path reconstruction  
