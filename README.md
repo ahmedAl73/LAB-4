@@ -54,12 +54,10 @@ A simulated **Shellshock attack** was performed on a web server to demonstrate:
 ---
 
 ## 🚨 Incident Response
-A simulated attack scenario was analyzed, including:
-
-- Initial access via vulnerable web server
-- Lateral movement to SCADA devices
-- Data exfiltration
-- Log manipulation
+The attack began with initial access to the OT web server (192.168.50.10) through the exploitation of the Shellshock vulnerability (CVE-2014-6271). The attacker, operating from the external IP address 203.0.113.100, sent a specially crafted HTTP request to a vulnerable CGI script hosted on the Apache web server. Due to improper input handling in the Bash shell, the malicious payload embedded within the HTTP header was executed by the server, granting the attacker remote code execution capabilities.
+Once inside the system, the attacker gained the same privileges as the web server process, which allowed them to execute commands, access system files, and manipulate configurations. This level of access enabled the attacker to establish persistence and begin exploring the internal OT network. The lack of proper access controls and segmentation allowed the attacker to move laterally from the compromised web server to SCADA devices using unauthorized SSH sessions. Since trust relationships existed within the OT environment, the attacker was able to authenticate or bypass protections without significant resistance.
+The attacker then initiated data exfiltration, transferring approximately 2.3 GB of sensitive data from the OT network to an external destination. This likely occurred through the same compromised server, which acted as a bridge between internal systems and the external network. Weak monitoring and insufficient logging controls contributed to the delay in detection. Additionally, the attacker manipulated bash history and Apache logs to hide their activity, making forensic analysis more difficult.
+The impact of this attack is significant, particularly in a critical infrastructure environment such as a water utility system. Unauthorized access to SCADA systems could allow attackers to manipulate water treatment processes, disrupt service delivery, or cause physical damage to infrastructure. This incident highlights the importance of patch management, network segmentation, and continuous monitoring in protecting sensitive operational technology environments.
 
 ### 🔍 Key Actions
 - Attack path reconstruction  
